@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router'
 
-import About from './pages/about'
+import About from './pages/About'
 import Contact from './pages/Contact'
 import Experiences from './pages/Experiences'
 import Langues from './pages/Langues'
