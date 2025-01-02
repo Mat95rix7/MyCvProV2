@@ -1,0 +1,72 @@
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  height: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #76c7c0, #12f61a);
+  border-radius: 15px;
+  position: relative;
+  transition: width 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.progress-bar-fill:hover {
+  animation: pulse 1.5s infinite;
+}
+
+.progress-bar-glow {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  animation: glow 2s infinite;
+}
+
+.progress-bar-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: bold;
+  line-height: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation for glowing effect */
+@keyframes glow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Pulse effect when hovering */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
